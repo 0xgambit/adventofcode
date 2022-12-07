@@ -18,4 +18,4 @@ with open("day7_input.txt", encoding="utf-8") as f:
                 for path in accumulate(current_dir):
                     directories[path] += int(size)
 
-print(sum(f_size for f_size in directories.values() if f_size <= dir_limit))
+print(min(f_size for f_size in directories.values() if f_size >= directories[''] - root_limit))
